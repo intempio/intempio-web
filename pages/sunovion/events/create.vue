@@ -10,6 +10,11 @@ import SunovionEventCreate from "~/components/SunovionEventCreate.vue";
 export default {
   components: {
     SunovionEventCreate
+  },
+  head() {
+    return {
+      title: "Sunovion Create Event"
+    };
   }
 };
 </script>

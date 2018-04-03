@@ -261,10 +261,7 @@ export default {
           const postData = { ...this.form, presenters: this.presentersList };
           console.log(postData);
           axios
-            .post(
-              `${process.env.VUE_APP_API_URL}/api/v1/sunovion-events`,
-              postData
-            )
+            .post(`api/v1/sunovion-events`, postData)
             .then(response => {
               console.log(response);
               this.loading = false;

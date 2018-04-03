@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:8000"
+    BASE_URL: process.env.BASE_URL || "http://localhost"
   },
   /*
   ** Global CSS
@@ -18,7 +18,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "mic-test",
+    title: "Intempio",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
