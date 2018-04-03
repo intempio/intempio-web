@@ -1,4 +1,11 @@
 module.exports = {
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ["script", "style", "font"].includes(type);
+      }
+    }
+  },
   env: {
     BASE_URL: process.env.BASE_URL || "http://localhost"
   },
@@ -7,7 +14,8 @@ module.exports = {
   */
   css: [
     "element-ui/lib/theme-chalk/reset.css",
-    "element-ui/lib/theme-chalk/index.css"
+    "element-ui/lib/theme-chalk/index.css",
+    "~/css/main.css"
   ],
 
   /*
