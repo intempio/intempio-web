@@ -27,6 +27,8 @@
   "now": {
     "env": {
       "BASE_URL": "https://intempio-api-qa.herokuapp.com"
-    }
+    },
+    "alias": "intempio-portal",
+    "name": "intempio-portal"
   }
 }
