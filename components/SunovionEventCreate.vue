@@ -269,7 +269,7 @@ export default {
                 title: "Success",
                 message: "Successfully submitted event.",
                 type: "success",
-                duration: 2500
+                duration: 3000
               });
               this.resetForm();
             })
@@ -280,7 +280,7 @@ export default {
                   title: "Error",
                   message: "Something is wrong please contact developer.",
                   type: "error",
-                  duration: 2500
+                  duration: 3000
                 });
                 // The request was made and the server responded with a status code
                 // that falls out of the range of 2xx
@@ -294,7 +294,7 @@ export default {
             title: "Error",
             message: "Some required fields are missing.",
             type: "error",
-            duration: 2500
+            duration: 3000
           });
         }
       });
