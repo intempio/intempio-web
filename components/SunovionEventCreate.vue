@@ -4,7 +4,7 @@
       <span style="font-size: 16px">Request Event for Sunovion Studio</span>
     </div>
     <el-form ref="form" :model="form" :rules="rules" size="small">
-      <!--<editor-fold desc="Requestor Details">-->
+
       <el-row :gutter="20">
         <el-col :lg="8">
           <el-form-item prop="requestor_name">
@@ -22,14 +22,13 @@
           </el-form-item>
         </el-col>
       </el-row>
-      <!--</editor-fold>-->
 
       <el-row>
         <el-col :span="12">
           <p class="form--label">Event Details</p>
         </el-col>
       </el-row>
-      <!--<editor-fold desc="date/time">-->
+
       <el-row :gutter="20">
         <el-col :lg="10">
           <el-form-item prop="name">
@@ -58,14 +57,13 @@
           </el-form-item>
         </el-col>
       </el-row>
-      <!--</editor-fold>-->
+
       <el-row>
         <el-col :span="12">
           <p class="form--label">Event Duration</p>
         </el-col>
       </el-row>
 
-      <!--<editor-fold desc="duration">-->
       <el-form-item prop="duration">
         <el-radio-group v-model="form.duration" size="small">
           <el-radio border :label="60">1 hour</el-radio>
@@ -75,7 +73,6 @@
           <el-radio :label="480" border>all day</el-radio>
         </el-radio-group>
       </el-form-item>
-      <!--</editor-fold>-->
 
       <el-row>
         <el-col :span="12">
@@ -83,7 +80,6 @@
         </el-col>
       </el-row>
 
-      <!--<editor-fold desc="checkboxes">-->
       <el-row>
         <el-col :lg="6">
           <el-form-item prop="producer_required">
@@ -110,7 +106,6 @@
           </el-form-item>
         </el-col>
       </el-row>
-      <!--</editor-fold>-->
 
       <el-row :gutter="20">
         <el-col :lg="7">
@@ -137,7 +132,6 @@
         </el-col>
       </el-row>
 
-      <!--<editor-fold desc="presenters">-->
       <el-row v-for="(presenter, index) in form.presenters" :key="presenter.key" :gutter="20">
         <el-col :lg="10">
           <el-form-item :prop="'presenters.' + index + '.name'">
@@ -163,7 +157,6 @@
           <el-button circle @click.prevent="removePresenter(presenter)" icon="el-icon-delete" size="small" style="margin-bottom: 10px" />
         </el-col>
       </el-row>
-      <!--</editor-fold>-->
 
       <p>
         <el-button type="primary" icon="el-icon-plus" @click="addPresenter" size="small">

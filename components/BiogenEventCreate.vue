@@ -239,10 +239,6 @@ export default {
         period: "",
         timezone: "EST",
         duration: "",
-        producer_required: false,
-        rehearsal_required: false,
-        technology_check: false,
-        recording_required: false,
         presenters: [],
         participants_count: 10,
         presenters_count: 1,
@@ -279,7 +275,7 @@ export default {
           const postData = { ...this.form, presenters: this.presentersList };
           console.log(postData);
           axios
-            .post(`api/v1/sunovion-events`, postData)
+            .post(`api/v1/biogen-events`, postData)
             .then(response => {
               console.log(response);
               this.loading = false;

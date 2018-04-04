@@ -7,7 +7,7 @@ module.exports = {
     }
   },
   env: {
-    BASE_URL: process.env.BASE_URL || "http://localhost"
+    BASE_URL: process.env.BASE_URL || "http://localhost:8000"
   },
   /*
   ** Global CSS
