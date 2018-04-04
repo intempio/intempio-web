@@ -69,7 +69,7 @@
       <el-form-item prop="duration">
         <el-radio-group v-model="form.duration" size="small">
           <el-radio border :label="60">1 hour</el-radio>
-          <el-radio :label="90" border>1.5 hours</el-radio>
+          <el-radio :label="90" border>1 1/2 hours</el-radio>
           <el-radio :label="120" border>2 hours</el-radio>
           <el-radio :label="240" border>half day</el-radio>
           <el-radio :label="480" border>all day</el-radio>
