@@ -8,6 +8,7 @@
 
       <div class="links">
         <a href="/sunovion/" class="button--green">Sunovion</a>
+        <a href="/biogen/" class="button--green">Biogen</a>
       </div>
     </div>
   </section>
