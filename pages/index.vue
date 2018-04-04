@@ -7,7 +7,7 @@
       </h1>
 
       <div class="links">
-        <a href="/sunovion/events/create" class="button--green">Sunovion</a>
+        <a href="/sunovion/" class="button--green">Sunovion</a>
       </div>
     </div>
   </section>
