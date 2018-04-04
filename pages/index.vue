@@ -1,13 +1,13 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
       <h1 class="title">
-        Intempio
+        intempio
       </h1>
 
       <div class="links">
-        <a href="/sunovion/" class="button--green">Sunovion</a>
+        <a href="/sunovion/" class="button--grey">Sunovion</a>
+        <a href="/biogen/" class="button--grey">Biogen</a>
       </div>
     </div>
   </section>
@@ -28,14 +28,13 @@ export default {};
 
 .title {
   display: block;
-  font-weight: 300;
-  font-size: 100px;
+  font-size: 70px;
   color: #35495e;
   letter-spacing: 1px;
+  margin-bottom: 0;
 }
 
 .subtitle {
-  font-weight: 300;
   font-size: 42px;
   color: #526488;
   word-spacing: 5px;
