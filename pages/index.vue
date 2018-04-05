@@ -1,13 +1,13 @@
 <template>
   <section class="container">
-    <div>
+    <div class="child">
       <h1 class="title">
         intempio
       </h1>
 
       <div class="links">
-        <a href="/sunovion/" class="button--grey">Sunovion</a>
-        <a href="/biogen/" class="button--grey">Biogen</a>
+        <nuxt-link to="/biogen" class="button--grey">Biogen</nuxt-link>
+        <nuxt-link to="/sunovion" class="button--grey">Sunovion</nuxt-link>
       </div>
     </div>
   </section>
@@ -17,13 +17,35 @@
 export default {};
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+.parent {
+  position: relative;
+}
+.child {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: -70px 0 0 -170px;
+}
+
+.button--grey {
+  display: inline-block;
+
+  /* border: 1px solid #35495e; */
+  color: #35495e;
+  padding: 10px 30px;
+  margin-left: 15px;
+}
+
+.button--grey:hover {
+  color: #35495e;
+  /* background-color: #35495e; */
+  text-decoration: underline;
 }
 
 .title {

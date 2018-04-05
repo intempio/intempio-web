@@ -135,8 +135,8 @@
 
       <el-row :gutter="20">
         <el-col :lg="8">
-          <el-form-item prop="docs_link">
-            <el-input v-model="form.docs_link" placeholder="Docs Link" />
+          <el-form-item prop="slide_deck_name">
+            <el-input v-model="form.slide_deck_name" placeholder="Docs Link" />
           </el-form-item>
         </el-col>
         <el-col :lg="8">
@@ -145,8 +145,8 @@
           </el-form-item>
         </el-col>
         <el-col :lg="8">
-          <el-form-item prop="client_event_code">
-            <el-input v-model="form.client_event_code" placeholder="Client Event Code" />
+          <el-form-item prop="program_meeting_id">
+            <el-input v-model="form.program_meeting_id" placeholder="Program Meeting ID" />
           </el-form-item>
         </el-col>
       </el-row>
@@ -197,8 +197,6 @@
 </template>
 
 <script>
-import axios from "~/plugins/axios";
-
 const requiredValidator = {
   required: true,
   message: "This field is required.",
@@ -242,11 +240,11 @@ export default {
         presenters: [],
         participants_count: 10,
         presenters_count: 1,
-        client_event_code: "",
+        program_meeting_id: "",
         notes: "",
         eod_webcast: "",
         ms_sma: "",
-        docs_link: "",
+        slide_deck_name: "",
         slide_deck_id: ""
       },
       rules: {
@@ -274,8 +272,8 @@ export default {
           // postData.presenters = this.presentersList;
           const postData = { ...this.form, presenters: this.presentersList };
           console.log(postData);
-          axios
-            .post(`api/v1/biogen-events`, postData)
+          this.$axios
+            .$post(`api/v1/biogen-events`, postData)
             .then(response => {
               console.log(response);
               this.loading = false;

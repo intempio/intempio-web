@@ -1,4 +1,10 @@
 module.exports = {
+  modules: ["@nuxtjs/axios"],
+
+  axios: {
+    // proxyHeaders: false
+    baseURL: process.env.BASE_URL || "http://localhost:8000"
+  },
   render: {
     bundleRenderer: {
       shouldPreload: (file, type) => {

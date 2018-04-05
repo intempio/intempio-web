@@ -181,8 +181,6 @@
 </template>
 
 <script>
-import axios from "~/plugins/axios";
-
 const requiredValidator = {
   required: true,
   message: "This field is required.",
@@ -253,8 +251,8 @@ export default {
           // postData.presenters = this.presentersList;
           const postData = { ...this.form, presenters: this.presentersList };
           console.log(postData);
-          axios
-            .post(`api/v1/sunovion-events`, postData)
+          this.$axios
+            .$post(`api/v1/sunovion-events`, postData)
             .then(response => {
               console.log(response);
               this.loading = false;

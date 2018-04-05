@@ -21,3 +21,16 @@ body {
 #__nuxt .el-form-item.is-success .el-textarea__inner:focus {
   border: 1px solid #dcdfe6;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 25px auto;
+}
