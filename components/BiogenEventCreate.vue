@@ -136,12 +136,12 @@
       <el-row :gutter="20">
         <el-col :lg="8">
           <el-form-item prop="slide_deck_name">
-            <el-input v-model="form.slide_deck_name" placeholder="Docs Link" />
+            <el-input v-model="form.slide_deck_name" placeholder="Slide Deck Name" />
           </el-form-item>
         </el-col>
         <el-col :lg="8">
           <el-form-item prop="slide_deck_id">
-            <el-input v-model="form.slide_deck_id" placeholder="Slick Deck ID" />
+            <el-input v-model="form.slide_deck_id" placeholder="Slide Deck ID" />
           </el-form-item>
         </el-col>
         <el-col :lg="8">
