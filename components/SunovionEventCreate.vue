@@ -38,7 +38,7 @@
 
         <el-col :lg="5">
           <el-form-item prop="date">
-            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" :picker-options="datePickerOptions" />
+            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" />
           </el-form-item>
         </el-col>
 
@@ -194,10 +194,17 @@ const emailValidator = {
 };
 
 const checkDate = (rule, value, callback) => {
-  console.log(value);
   if (!value) {
-    return callback(new Error("Can't enter past dates."));
+    return callback(new Error("This field is required"));
   }
+
+  setTimeout(() => {
+    if (new Date(Date.parse(value)).getDate() < new Date().getDate()) {
+      callback(new Error("Can't enter past dates."));
+    } else {
+      callback();
+    }
+  }, 0);
 };
 
 export default {
@@ -219,9 +226,10 @@ export default {
         end: "12:00"
       },
       datePickerOptions: {
-        disabledDate(date) {
-          if (date.getDate() < new Date().getDate()) return true;
-        }
+        // disabledDate(date) {
+        //   // if (date.getDate() < new Date().getDate()) return true;
+        //   return false;
+        // }
       },
       form: {
         name: "",
