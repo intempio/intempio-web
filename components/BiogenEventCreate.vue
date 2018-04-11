@@ -37,7 +37,7 @@
 
         <el-col :lg="5">
           <el-form-item prop="date">
-            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" :picker-options="datePickerOptions" />
+            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" :picker-options="datePickerOptions" @paste="handler(arg, event)" />
           </el-form-item>
         </el-col>
 
@@ -209,6 +209,13 @@ const emailValidator = {
   trigger: "change"
 };
 
+const checkDate = (rule, value, callback) => {
+  console.log(value);
+  if (!value) {
+    return callback(new Error("Can't enter past dates."));
+  }
+};
+
 export default {
   computed: {
     presentersList: function() {
@@ -257,7 +264,7 @@ export default {
         phone: [requiredValidator],
         email: [requiredValidator, emailValidator],
         name: [requiredValidator],
-        date: [requiredValidator],
+        date: [{ validator: checkDate, trigger: "blur" }],
         time: [requiredValidator],
         period: [requiredValidator],
         duration: [requiredValidator],
@@ -269,6 +276,9 @@ export default {
     };
   },
   methods: {
+    hanlder() {
+      console.log("works");
+    },
     onSubmit() {
       this.$refs.form.validate(success => {
         if (success) {

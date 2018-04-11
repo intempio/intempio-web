@@ -193,6 +193,13 @@ const emailValidator = {
   trigger: "change"
 };
 
+const checkDate = (rule, value, callback) => {
+  console.log(value);
+  if (!value) {
+    return callback(new Error("Can't enter past dates."));
+  }
+};
+
 export default {
   computed: {
     presentersList: function() {
@@ -239,7 +246,7 @@ export default {
         phone: [requiredValidator],
         email: [requiredValidator, emailValidator],
         name: [requiredValidator],
-        date: [requiredValidator],
+        date: [{ validator: checkDate, trigger: "blur" }],
         time: [requiredValidator],
         period: [requiredValidator],
         duration: [requiredValidator]
