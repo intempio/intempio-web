@@ -38,17 +38,18 @@
 
         <el-col :lg="5">
           <el-form-item prop="date">
-            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" />
+            <el-date-picker type="date" placeholder="Event Date (required)" v-model="form.date" style="width: 100%;" value-format="yyyy-MM-dd" :picker-options="datePickerOptions" />
           </el-form-item>
         </el-col>
 
         <el-col :lg="6">
           <el-form-item prop="time">
-            <el-time-select v-model="form.time" placeholder="Event Time (required)" :picker-options="pickerOptions" />
+            <el-time-select v-model="form.time" placeholder="Event Time (required)" :picker-options="timePickerOptions" />
           </el-form-item>
         </el-col>
 
         <el-col :lg="3">
+          datePickerOptions: { disabledDate(date) { console.log(date); } },
           <el-form-item prop="period">
             <el-radio-group v-model="form.period">
               <el-radio-button label="am">AM</el-radio-button>
@@ -206,10 +207,15 @@ export default {
   },
   data() {
     return {
-      pickerOptions: {
+      timePickerOptions: {
         start: "01:00",
         step: "00:15",
         end: "12:00"
+      },
+      datePickerOptions: {
+        disabledDate(date) {
+          if (date < new Date()) return true;
+        }
       },
       form: {
         name: "",
