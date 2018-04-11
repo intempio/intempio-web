@@ -229,7 +229,7 @@ export default {
       },
       datePickerOptions: {
         disabledDate(date) {
-          if (date < new Date()) return true;
+          if (date.getDate() < new Date().getDate()) return true;
         }
       },
       form: {

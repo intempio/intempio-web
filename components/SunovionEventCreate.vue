@@ -49,7 +49,6 @@
         </el-col>
 
         <el-col :lg="3">
-          datePickerOptions: { disabledDate(date) { console.log(date); } },
           <el-form-item prop="period">
             <el-radio-group v-model="form.period">
               <el-radio-button label="am">AM</el-radio-button>
@@ -214,7 +213,7 @@ export default {
       },
       datePickerOptions: {
         disabledDate(date) {
-          if (date < new Date()) return true;
+          if (date.getDate() < new Date().getDate()) return true;
         }
       },
       form: {
