@@ -6,8 +6,8 @@
       </h1>
 
       <div class="links">
-        <nuxt-link to="/biogen" class="button--grey">Biogen</nuxt-link>
-        <nuxt-link to="/sunovion" class="button--grey">Sunovion</nuxt-link>
+        <nuxt-link to="/biogen/newevent" class="button--grey">Biogen</nuxt-link>
+        <nuxt-link to="/sunovion/newevent" class="button--grey">Sunovion</nuxt-link>
       </div>
     </div>
   </section>

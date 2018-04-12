@@ -3,7 +3,8 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
-    baseURL: process.env.BASE_URL || "http://localhost:8000"
+    // baseURL: "https://intempio-api-qa.herokuapp.com",
+    baseURL: "http://localhost:8000"
   },
   render: {
     bundleRenderer: {
@@ -34,18 +35,18 @@ module.exports = {
   head: {
     title: "Intempio",
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Intempio Portal" },
-      { name: "msapplication-TileColor", content: "#ffffff" },
-      { name: "msapplication-TileImage", content: "/ms-icon-144x144.png" },
-      { name: "theme-color", content: "#ffffff" }
+      {charset: "utf-8"},
+      {name: "viewport", content: "width=device-width, initial-scale=1"},
+      {hid: "description", name: "description", content: "Intempio Portal"},
+      {name: "msapplication-TileColor", content: "#ffffff"},
+      {name: "msapplication-TileImage", content: "/ms-icon-144x144.png"},
+      {name: "theme-color", content: "#ffffff"}
     ],
     link: [
-      { rel: "apple-touch-icon", sizes: "57x57", href: "/favicon-57x57.png" },
-      { rel: "apple-touch-icon", sizes: "60x60", href: "/favicon-60x60.png" },
-      { rel: "apple-touch-icon", sizes: "72x72", href: "/favicon-72x72.png" },
-      { rel: "apple-touch-icon", sizes: "76x76", href: "/favicon-76x76.png" },
+      {rel: "apple-touch-icon", sizes: "57x57", href: "/favicon-57x57.png"},
+      {rel: "apple-touch-icon", sizes: "60x60", href: "/favicon-60x60.png"},
+      {rel: "apple-touch-icon", sizes: "72x72", href: "/favicon-72x72.png"},
+      {rel: "apple-touch-icon", sizes: "76x76", href: "/favicon-76x76.png"},
       {
         rel: "apple-touch-icon",
         sizes: "114x114",
@@ -95,13 +96,13 @@ module.exports = {
         sizes: "16x16",
         href: "/favicon-16x16.png"
       },
-      { rel: "manifest", href: "/manifest.json" }
+      {rel: "manifest", href: "/manifest.json"}
     ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: "#3B8070" },
+  loading: {color: "#3B8070"},
   /*
   ** Build configuration
   */
@@ -109,7 +110,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend(config, { isDev, isClient }) {
+    extend(config, {isDev, isClient}) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: "pre",
