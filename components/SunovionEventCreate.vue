@@ -42,7 +42,7 @@
           </el-form-item>
         </el-col>
 
-        <el-col :lg="6">
+        <el-col :lg="5">
           <el-form-item prop="time">
             <el-time-select v-model="form.time" placeholder="Event Time (required)"
                             :picker-options="timePickerOptions"/>
