@@ -3,8 +3,8 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
-    // baseURL: "https://intempio-api-prod.herokuapp.com",
-    baseURL: "https://intempio-api-staging.herokuapp.com",
+    baseURL: "https://intempio-api-prod.herokuapp.com",
+    // baseURL: "https://intempio-api-staging.herokuapp.com",
     // baseURL: "http://localhost:8000"
   },
   render: {
