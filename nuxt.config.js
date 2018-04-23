@@ -3,8 +3,8 @@ module.exports = {
 
   axios: {
     // proxyHeaders: false
-    // baseURL: "https://intempio-api-qa.herokuapp.com",
-    baseURL: "http://localhost:8000"
+    baseURL: "https://intempio-api-prod.herokuapp.com",
+    // baseURL: "http://localhost:8000"
   },
   render: {
     bundleRenderer: {
@@ -12,9 +12,6 @@ module.exports = {
         return ["script", "style", "font"].includes(type);
       }
     }
-  },
-  env: {
-    BASE_URL: process.env.BASE_URL || "http://localhost:8000"
   },
   /*
   ** Global CSS
