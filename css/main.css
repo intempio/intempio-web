@@ -26,11 +26,17 @@ body {
 .page-leave-active {
   transition: opacity 0.5s;
 }
+
 .page-enter,
 .page-leave-to {
   opacity: 0;
 }
+
 .container {
   max-width: 1200px;
   margin: 40px auto;
+}
+
+#__nuxt .el-radio--small.is-bordered {
+  margin-bottom: 10px;
 }
