@@ -14,56 +14,61 @@
 </template>
 
 <script>
-export default {};
+  export default {
+    created() {
+      console.log(process.env.baseUrl)
+    }
+  };
 </script>
 
 <style scoped>
-.parent {
-  position: relative;
-}
-.child {
-  width: 300px;
-  height: 100px;
-  padding: 20px;
+  .parent {
+    position: relative;
+  }
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  .child {
+    width: 300px;
+    height: 100px;
+    padding: 20px;
 
-  margin: -70px 0 0 -170px;
-}
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-.button--grey {
-  display: inline-block;
+    margin: -70px 0 0 -170px;
+  }
 
-  /* border: 1px solid #35495e; */
-  color: #35495e;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+  .button--grey {
+    display: inline-block;
 
-.button--grey:hover {
-  color: #35495e;
-  /* background-color: #35495e; */
-  text-decoration: underline;
-}
+    /* border: 1px solid #35495e; */
+    color: #35495e;
+    padding: 10px 30px;
+    margin-left: 15px;
+  }
 
-.title {
-  display: block;
-  font-size: 70px;
-  color: #35495e;
-  letter-spacing: 1px;
-  margin-bottom: 0;
-}
+  .button--grey:hover {
+    color: #35495e;
+    /* background-color: #35495e; */
+    text-decoration: underline;
+  }
 
-.subtitle {
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
+  .title {
+    display: block;
+    font-size: 70px;
+    color: #35495e;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
 
-.links {
-  padding-top: 15px;
-}
+  .subtitle {
+    font-size: 42px;
+    color: #526488;
+    word-spacing: 5px;
+    padding-bottom: 15px;
+  }
+
+  .links {
+    padding-top: 15px;
+  }
 </style>

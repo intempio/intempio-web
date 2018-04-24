@@ -1,0 +1,12 @@
+# Global settings applied to the whole site.
+[build]
+publish = "dist"
+command = "npm run generate"
+
+[context.production]
+  [context.production.environment]
+    BASE_URL = "https://intempio-api-prod.herokuapp.com"
+
+[context.branch-deploy]
+  [context.branch-deploy.environment]
+    BASE_URL = "https://intempio-api-staging.herokuapp.com"
