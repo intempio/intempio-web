@@ -1,7 +1,7 @@
 <template>
   <el-card v-loading.fullscreen.lock="loading" element-loading-text="Submitting event . . .">
     <div slot="header" class="clearfix">
-      <span style="font-size: 16px">Request Event for Sunovion Studio</span>
+      <h3 style="font-weight: 600">Request Event for Sunovion Studio</h3>
     </div>
     <el-form ref="form" :model="form" :rules="rules" size="small">
       <el-row :gutter="20">
